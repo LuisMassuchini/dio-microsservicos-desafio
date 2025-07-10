@@ -1,0 +1,21 @@
+# Define a porta do Gateway (conforme especificado, entre 8700-8799)
+server:
+  port: 8765
+
+# Nome da aplicação no Eureka
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      # A mágica acontece aqui!
+      discovery:
+        locator:
+          enabled: true # Habilita a criação de rotas a partir do Eureka
+          lower-case-service-id: true # Converte o nome do serviço para minúsculas na URL
+
+# Configuração do cliente Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
