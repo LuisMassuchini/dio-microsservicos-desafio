@@ -2,19 +2,19 @@
 server:
   port: 8765
 
-# Nome da aplicação no Eureka
+# Nome da aplicaÃ§Ã£o no Eureka
 spring:
   application:
     name: api-gateway
   cloud:
     gateway:
-      # A mágica acontece aqui!
+      # A mÃ¡gica acontece aqui!
       discovery:
         locator:
-          enabled: true # Habilita a criação de rotas a partir do Eureka
-          lower-case-service-id: true # Converte o nome do serviço para minúsculas na URL
+          enabled: true # Habilita a criaÃ§Ã£o de rotas a partir do Eureka
+          lower-case-service-id: true # Converte o nome do serviÃ§o para minÃºsculas na URL
 
-# Configuração do cliente Eureka
+# ConfiguraÃ§Ã£o do cliente Eureka
 eureka:
   client:
     service-url:
