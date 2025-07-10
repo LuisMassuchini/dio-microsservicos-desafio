@@ -1,9 +1,11 @@
-package br.com.dio.challenge.order_simulator;
+package br.com.dio.challenge.ordersimulator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
+@EnableFeignClients
 public class OrderSimulatorApplication {
 
 	public static void main(String[] args) {
